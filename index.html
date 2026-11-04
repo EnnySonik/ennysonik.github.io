@@ -118,7 +118,7 @@ section{
 
 .gallery{
   display:grid;
-  grid-template-columns: 1fr;
+  grid-template-columns:repeat(2,1fr);
   gap:16px;
 }
 
@@ -131,7 +131,7 @@ section{
 
 .artwork img{
   width:100%;
-  height:auto;
+  height:310px;
   display:block;
   object-fit:cover;
 }
@@ -227,23 +227,37 @@ section{
 
 /* LINKS */
 
-.links
+.links{
+  display:grid;
+  gap:12px;
+}
 
-<links rel="stylesheet"
-href="htpps://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+.links a,
+.contact-button{
+  display:block;
+  padding:16px 18px;
+  border:1px solid #122033;
+  background:#fff;
+  color:#122033;
+  text-decoration:none;
+  text-align:center;
+  font-size:14px;
+  letter-spacing:1.5px;
+  transition:.25s ease;
+}
 
 .links a:hover{
   background:#122033;
   color:#fff;
 }
 
-/* message */
+/* CONTACT */
 
-.message{
+.contact{
   text-align:center;
 }
 
-.message p{
+.contact p{
   margin:0 auto 20px;
   font-family:Georgia,serif;
   font-size:15px;
@@ -251,7 +265,7 @@ href="htpps://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
   color:#26364a;
 }
 
-.message-button{
+.contact-button{
   max-width:320px;
   margin:auto;
   background:#122033;
@@ -259,7 +273,7 @@ href="htpps://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
   font-weight:bold;
 }
 
-.message-button:hover{
+.contact-button:hover{
   background:#1d3048;
 }
 
@@ -380,7 +394,7 @@ Stillness Amidst The Stone <br>
 Dimension: 11 &times; 16
 
 <a class="art-action"
-href="https://wa.me/2349042493332?text=Hello%20Enny%2C%20I'm%20interested%20in%20this%20artwork%20and%20would%20like%20to%20order%20a%20print.%20Please%20send%20me%20the%20details."
+href="https://wa.me/2349042493332?text=Hello%20Enny%20Sonik%2C%20I'd%20like%20to%20order%20a%20limited%20edition%20print%20of%20%22Stillness%20Amidst%20The%20Stone.%22%20Please%20send%20me%20the%20available%20options%20and%20payment%20details."
 target="_blank"
 rel="noopener">
 Order a Print
@@ -402,12 +416,11 @@ alt="Untitled artwork by Enny Sonik">
 
 <figcaption>
 Vision Beyond Silence <br>
-Dimension: 19 &times; 25
+Dimension: 25 &times; 19
 
 <a class="art-action"
-href="https://wa.me/2349042493332?text=Hello%20Enny%2C%20I'm%20interested%20in%20purchasing%20a%20print%20of%20Vision%20Beyond%20Silence.
-  %20Please%20let%20me%20know%20the%20available%20sizes%2C%20and%20delivery%20options."
-target="_blank"lik
+href="https://wa.me/2349042493332?text=Hello%20Enny%20Sonik%2C%20I'd%20like%20to%20pre-order%20the%20%22Untitled%22%20artwork.%20Please%20send%20me%20the%20details%20and%20payment%20information."
+target="_blank"
 rel="noopener">
 Order print(s)
 </a>
@@ -486,8 +499,7 @@ Original Artworks
 Limited Edition Prints
 
 <a class="service-link"
-href="https://wa.me/2349042493332?text=Hello%20Enny%20Sonik%2C%20I'd%20like%20to%20order%20a%20limited%20edition%20print.
-  %20Please%20send%20me%20the%20available%20options%20and%20payment%20details."
+href="https://wa.me/2349042493332?text=Hello%20Enny%20Sonik%2C%20I'd%20like%20to%20order%20a%20limited%20edition%20print.%20Please%20send%20me%20the%20available%20options%20and%20payment%20details."
 target="_blank"
 rel="noopener">
 Order a Print
@@ -500,8 +512,7 @@ Order a Print
 Commissioned Art
 
 <a class="service-link"
-href="https://wa.me/2349042493332?text=Hello%20Enny%20Sonik%2C%20I'd%20like%20to%20request%20a%20commissioned%20artwork.
-  %20Please%20send%20me%20the%20details%20about%20the%20process%20and pricing."
+href="https://wa.me/2349042493332?text=Hello%20Enny%20Sonik%2C%20I'd%20like%20to%20request%20a%20commissioned%20artwork.%20Please%20send%20me%20the%20details%20about%20the%20process%20and pricing."
 target="_blank"
 rel="noopener">
 Request a Commission
@@ -514,8 +525,7 @@ Request a Commission
 Framing
 
 <a class="service-link"
-href="https://wa.me/2349042493332?text=Hello%20Enny%20Sonik%2C%20I'd%20like%20to%20inquire%20about%20your%20framing%20service.
-  %20Please%20send%20me%20the%20available%20options%20and%20pricing."
+href="https://wa.me/2349042493332?text=Hello%20Enny%20Sonik%2C%20I'd%20like%20to%20inquire%20about%20your%20framing%20service.%20Please%20send%20me%20the%20available%20options%20and%20pricing."
 target="_blank"
 rel="noopener">
 Inquire About Framing
@@ -527,15 +537,66 @@ Inquire About Framing
 
 </section>
 
-<!-- message -->
+
+<!-- CONNECT -->
+
 <section>
+
+<h2 class="section-title">
+Connect
+</h2>
+
+<div class="section-line"></div>
+
+<div class="links">
+
+<a href="https://www.instagram.com/enny_sonik_arts"
+target="_blank" rel="noopener">
+Instagram
+</a>
+
+<a href="https://www.facebook.com/profile.php?id=61591448286334"
+target="_blank" rel="noopener">
+Facebook
+</a>
+
+<a href="https://www.tiktok.com/@enny_sonik_arts"
+target="_blank" rel="noopener">
+TikTok
+</a>
+
+<a href="https://www.behance.net/ennysonik"
+target="_blank" rel="noopener">
+Behance — Portfolio
+</a>
+
+<a href="https://www.linkedin.com/in/enny-sonik-71bb9235a"
+target="_blank" rel="noopener">
+LinkedIn
+</a>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact">
+
+<h2 class="section-title">
+Commission / Contact
+</h2>
+
+<div class="section-line"></div>
+
 <p>
 Interested in an original artwork or a commissioned piece?
 I'd be happy to hear from you.
 </p>
 
 <a class="contact-button"
-href="https://wa.me/2349042493332?text=Hello%20Enny%20Sonik%2C%20I'd%20like%20to%20make%20an%20inquiry%20about%20your%20artworks."
+href="https://wa.me/2349042493332?text=Hello%20Enny%20Sonik%2C%20I'd%20like%20to%20make%20an%20inquiry%20about%20your%20artwork."
 target="_blank"
 rel="noopener">
 
@@ -547,42 +608,6 @@ Message me on WhatsApp
 
 
 <!-- FOOTER -->
-  <section>
-
-<h2 class="section-title">
-Connect
-</h2>
-<div class="section-line"></div>
-
-<div class="links">
-
-<a href="https://www.instagram.com/enny_sonik_arts">
-  <i class="fab fa-instagzam"></i>
-
-</a>
-
-<a href="https://www.facebook.com/profile.php?id=61591448286334">
-  <i class="fab fa-facebook"></i>
-
-</a>
-
-<a href="https://www.tiktok.com/@enny_sonik_arts">
-  <i class="fab fa-tiktok"></i>
-
-  
-</a>
-
-<a href="https://www.behance.net/ennysonik">
-<i class="fab fa-behance"></i>
-</a>
-
-<a href="https://www.linkedin.com/in/enny-sonik-71bb9235a">
-<i class="fab fa-linkedin"></i>
-</a>
-
-</div>
-
-</section>
 
 <div class="footer">
 
