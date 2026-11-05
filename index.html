@@ -6,7 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#071626">
 <title>Enny Sonik | Hyperrealist Artist</title>
-
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap');
 
@@ -216,18 +217,24 @@ footer{
   flex-wrap:wrap;
   gap:22px;
 }
-.socials a{
-  color:var(--light);
-  font-size:13px;
-}
-.socials a:hover{color:white}
+.socials a {
+    width: 30px;
+    height: 30px;
 
-.copyright{
-  color:#8da0b5;
-  font-size:11px;
-  margin-top:22px;
+    display: grid;
+    place-items: center;
+
+    color: var(--blue);
+
+    font-size: 20px;
+
+    transition: .3s ease;
 }
 
+.socials a:hover {
+    color: var(--white);
+    transform: translateY(-4px);
+}
 /* SIDE MENU */
 
 .backdrop{
@@ -514,7 +521,7 @@ body.menu-open .drawer{
     <p class="role">HYPERREALIST ARTIST</p>
 
     <p class="welcome">Welcome To My Space!</p>
-
+<span class="toast-caption">Acknowledge our greetings</span>
     <button class="thanks" id="thanksButton">
       Thank You
     </button>
@@ -651,14 +658,36 @@ body.menu-open .drawer{
 
 <footer>
   <nav class="socials">
-    <a href="#" target="_blank">Instagram</a>
-    <a href="#" target="_blank">Facebook</a>
-    <a href="#" target="_blank">TikTok</a>
-    <a href="#" target="_blank">YouTube</a>
-    <a href="#" target="_blank">X</a>
-    <a href="#" target="_blank">Behance</a>
-    <a href="#" target="_blank">LinkedIn</a>
-  </nav>
+
+  <a href="#https://www.instagram.com/enny_sonik_arts?igsh=MTQ5Zm0zbTkzNzlweQ==" aria-label="Instagram" target="_blank">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+
+  <a href="#https://www.facebook.com/profile.php?id=61591448286334&mibextid=ZbWKwL" aria-label="Facebook" target="_blank">
+    <i class="fa-brands fa-facebook-f"></i>
+  </a>
+
+  <a href="#https://www.tiktok.com/@enny_sonik_arts?_r=1&_t=ZS-98jo3cooDcF" aria-label="TikTok" target="_blank">
+    <i class="fa-brands fa-tiktok"></i>
+  </a>
+
+  <a href="#https://youtube.com/@enny_sonik_arts" aria-label="YouTube" target="_blank">
+    <i class="fa-brands fa-youtube"></i>
+  </a>
+
+  <a href="#https://x.com/Enny_sonik" aria-label="X" target="_blank">
+    <i class="fa-brands fa-x-twitter"></i>
+  </a>
+
+  <a href="#" aria-label="Behance" target="_blank">
+    <i class="fa-brands fa-behance"></i>
+  </a>
+
+  <a href="#https://www.linkedin.com/in/enny-sonik-71bb9235a?utm_source=share_via&utm_content=profile&utm_medium=member_android" aria-label="LinkedIn" target="_blank">
+    <i class="fa-brands fa-linkedin-in"></i>
+  </a>
+
+    </nav>
 
   <p class="copyright">
     © <span id="year"></span> Enny Sonik. All Rights Reserved.
@@ -707,8 +736,8 @@ body.menu-open .drawer{
 <!-- THANK YOU ANIMATION -->
 
 <div class="toast" id="toast">
-  <span class="toast-caption">Acknowledge our greetings</span>
-  <span class="toast-message">Thank You</span>
+  
+  <span class="toast-message">🥳🥳🥳</span>
 </div>
 
 <script>
