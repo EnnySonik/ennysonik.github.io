@@ -449,7 +449,86 @@ body.menu-open .drawer{
   color:#c2ceda;
   line-height:1.9;
 }
+/* ARTWORK GALLERY */
 
+.artwork-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 25px;
+}
+
+.artwork-card {
+  border: 1px solid var(--line);
+  background: rgba(7,22,38,.75);
+  overflow: hidden;
+  transition: transform .3s ease, border-color .3s ease;
+}
+
+.artwork-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--light);
+}
+
+.artwork-image {
+  width: 100%;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background: #061321;
+}
+
+.artwork-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.artwork-info {
+  padding: 22px;
+}
+
+.artwork-info h3 {
+  font: 23px 'Playfair Display', serif;
+  color: var(--light);
+  margin: 0 0 10px;
+}
+
+.artwork-info p {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 7px 0;
+}
+
+.art-action {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 11px 20px;
+  border: 1px solid var(--blue);
+  color: var(--light);
+  font-size: 12px;
+  letter-spacing: 1px;
+  transition: .3s;
+}
+
+.art-action:hover {
+  background: var(--blue);
+  color: var(--navy);
+}
+
+@media(max-width:650px) {
+  .artwork-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .artwork-image {
+    height: 380px;
+  }
+}
 .content-area .placeholder{
   color:var(--blue);
   font-size:11px;
@@ -552,60 +631,114 @@ body.menu-open .drawer{
     </div>
     <div class="content-area">
       <p class="placeholder">ABOUT ME</p>
-      Enny Sonik is a visual artist whose primary medium is charcoal pencil.
-Through my drawings, I explore the intricate relationship between
+      Enny Sonik is a visual artist whose primary medium is charcoal pencil. Through my drawings, I explore the intricate relationship between
 humanity and nature, examining themes of economic balance, social
 inequality, and resilience in the face of adversity. My works serve
 as a visual dialogue about our shared environment and the enduring
-strength of the human spirit.<b>I was born in Lagos, Nigeria, in the year 2005. My legal name is Kojo Solomon Setonji Eniola, but I am professionally known as Enny Sonik. 
+strength of the human spirit. <p>I was born in Lagos, Nigeria, in the year 2005. My legal name is Kojo Solomon Setonji Eniola, but I am professionally known as Enny Sonik. 
 
-As a self-thought  artist, the journey of my art began at the age of ten, and then, in 2024, I fully realized my talent and ventured into art.</b>
+As a self-thought  artist, the journey of my art began at the age of ten, and then, in 2024, I fully realized my talent and ventured into art.</p>
     </div>
     <a class="back-home" href="#home">← Back to Home</a>
   </div>
 </div>
+
 
 <div id="artworks" class="page">
   <div class="page-container">
-    <div class="page-heading">
-      <h1>My Art Collections<h1>
-      <div class="rule"></div>
-      <p class="page-intro">Explore selected artworks and creative expressions.</p>
-    </div>
-    <div class="content-area">
-      <p class="placeholder">Original Artworks</p>
-      
-      <!--Vision Beyond Silence-->
-      
-      <img src="20260922_071025-01.jpeg"alt="Vision Beyond Silence"> 
-      <figcaption>Dimensios: 19 &times;25
-      <a class="art-action"
-href="https://wa.me/2349042493332?text=Hello%20Enny%20Sonik%2C%20I'd%20like%20to%20purchase%22Vision%20Beyond%20Silence.%20Please%20send%20me%20the%20details%20and%20payment%20information."
-target="_blank"
-rel="noopener">
-Order print(s)
-      </a>
-      </figcaption>
 
-      <!--Stillness Amidst The Stone-->
-      
-      <img src="20250813_140825-01.jpeg"alt="Stillness Amidst The Stone"> 
-      <figcaption>Dimensions: 11 &times;16
-      <a class="art-action"
-href="https://wa.me/2349042493332?text=Hello%20Enny%20Sonik%2C%20I'd%20like%20to%20order%20a%20limited%20edition%20print%20of%20%22Stillness%20Amidst%20The%20Stone.%22%20Please%20send%20me%20the%20available%20options%20and%20payment%20details."
-target="_blank"
-rel="noopener">
-Order a Print
-      </a> 
-      </figcaption>
-    </div> 
-        <div class="content-area">
-      <p class="placeholder">Commissioned Artworks</p>  
-      Your artwork images, titles, descriptions and prices can be added here.
-        </div>
+    <div class="page-heading">
+      <p class="eyebrow">A COLLECTION OF MY WORK</p>
+      <h1>My Art Collections</h1>
+      <div class="rule"></div>
+      <p class="page-intro">
+        Explore selected artworks and creative expressions.
+      </p>
+    </div>
+
+    <div class="content-area">
+
+      <p class="placeholder">ORIGINAL ARTWORKS</p>
+
+      <div class="artwork-grid">
+
+        <!-- VISION BEYOND SILENCE -->
+
+        <article class="artwork-card">
+
+          <div class="artwork-image">
+            <img
+              src="20260922_071025-01.jpeg"
+              alt="Vision Beyond Silence by Enny Sonik"
+              loading="lazy">
+          </div>
+
+          <div class="artwork-info">
+            <h3>Vision Beyond Silence</h3>
+            <p>Medium: Charcoal pencil</p>
+            <p>Dimensions: 19 × 25 inches</p>
+
+            <a class="art-action"
+              href="https://wa.me/2349042493332?text=Hello%20Enny%20Sonik%2C%20I%27d%20like%20to%20purchase%20a%20print%20of%20Vision%20Beyond%20Silence.%20Please%20send%20me%20the%20details."
+              target="_blank"
+              rel="noopener noreferrer">
+              ORDER A PRINT
+            </a>
+          </div>
+
+        </article>
+
+
+        <!-- STILLNESS AMIDST THE STONE -->
+
+        <article class="artwork-card">
+
+          <div class="artwork-image">
+            <img
+              src="20250813_140825-01.jpeg"
+              alt="Stillness Amidst The Stone by Enny Sonik"
+              loading="lazy">
+          </div>
+
+          <div class="artwork-info">
+            <h3>Stillness Amidst The Stone</h3>
+            <p>Medium: Charcoal pencil</p>
+            <p>Dimensions: 11 × 16 inches</p>
+
+            <a class="art-action"
+              href="https://wa.me/2349042493332?text=Hello%20Enny%20Sonik%2C%20I%27d%20like%20to%20order%20a%20limited%20edition%20print%20of%20Stillness%20Amidst%20The%20Stone.%20Please%20send%20me%20the%20available%20options%20and%20payment%20details."
+              target="_blank"
+              rel="noopener noreferrer">
+              ORDER A PRINT
+            </a>
+          </div>
+
+        </article>
+
+      </div>
+    </div>
+
+
+    <!-- COMMISSIONED ARTWORKS -->
+
+    <div class="content-area" style="margin-top:35px;">
+
+      <p class="placeholder">COMMISSIONED ARTWORKS</p>
+
+      <p>
+        A selection of commissioned portraits and artworks
+        created for individual collectors and clients.
+      </p>
+
+      <!-- Add commissioned artwork cards here later -->
+
+    </div>
+
     <a class="back-home" href="#home">← Back to Home</a>
+
   </div>
 </div>
+
 
 <div id="behind-the-art" class="page">
   <div class="page-container">
