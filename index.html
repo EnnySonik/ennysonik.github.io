@@ -567,6 +567,112 @@ body.menu-open .drawer{
     transition-duration:.01ms!important;
   }
 }
+  /* PRINT ORDER CONTACT WINDOW */
+.order-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  place-items: center;
+  padding: 20px;
+}
+
+.order-modal.open {
+  display: grid;
+}
+
+.order-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(5px);
+}
+
+.order-dialog {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 430px;
+  padding: 35px 25px;
+  background: var(--navy2);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.order-dialog .eyebrow {
+  color: var(--blue);
+  font-size: 11px;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.order-dialog h2 {
+  color: var(--white);
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  margin-bottom: 12px;
+}
+
+#selectedArtwork {
+  color: var(--muted);
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.order-choices {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.order-choices .art-action {
+  display: block;
+  width: 100%;
+  font-family: inherit;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+.order-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: none;
+  background: transparent;
+  color: var(--white);
+  font-size: 28px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.order-button {
+  font-family: inherit;
+  cursor: pointer;
+  }
+  .contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.contact-actions .art-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .contact-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+} 
 </style>
 </head>
 
@@ -606,7 +712,7 @@ body.menu-open .drawer{
     </button>
   </div>
 
-  <div class="hero-note">ART · OBSERVATION · EXPRESSION</div>
+  <div class="hero-note">CHARCOAL · GRAPHITE · MIXED-MEDIA</div>
 </section>
 
 <section class="updates">
@@ -678,12 +784,11 @@ As a self-thought  artist, the journey of my art began at the age of ten, and th
             <p>Medium: Charcoal pencil</p>
             <p>Dimensions: 19 × 25 inches</p>
 
-            <a class="art-action"
-              href="https://wa.me/2349042493332?text=Hello%20Enny%20Sonik%2C%20I%27d%20like%20to%20purchase%20a%20print%20of%20Vision%20Beyond%20Silence.%20Please%20send%20me%20the%20details."
-              target="_blank"
-              rel="noopener noreferrer">
-              ORDER A PRINT
-            </a>
+            <button class="art-action order-button"
+        type="button"
+        data-artwork="Vision Beyond Silence">
+  ORDER A PRINT
+</button> 
           </div>
 
         </article>
@@ -705,12 +810,11 @@ As a self-thought  artist, the journey of my art began at the age of ten, and th
             <p>Medium: Charcoal pencil</p>
             <p>Dimensions: 11 × 16 inches</p>
 
-            <a class="art-action"
-              href="https://wa.me/2349042493332?text=Hello%20Enny%20Sonik%2C%20I%27d%20like%20to%20order%20a%20limited%20edition%20print%20of%20Stillness%20Amidst%20The%20Stone.%20Please%20send%20me%20the%20available%20options%20and%20payment%20details."
-              target="_blank"
-              rel="noopener noreferrer">
-              ORDER A PRINT
-            </a>
+            <button class="art-action order-button"
+        type="button"
+        data-artwork="Stillness Amidst The Stone">
+  ORDER A PRINT
+</button> 
           </div>
 
         </article>
@@ -795,16 +899,51 @@ As a self-thought  artist, the journey of my art began at the age of ten, and th
       <p class="eyebrow">RECOGNITION AND PARTICIPATION</p>
       <h1>Exhibitions &amp; Features</h1>
       <div class="rule"></div>
-      <p class="page-intro">A record of exhibitions, publications, features and artistic milestones.</p>
+      <p class="page-intro">Records of my exhibitions, publications, features and artistic milestones.</p>
     </div>
     <div class="content-area">
       <p class="placeholder">EXHIBITIONS & FEATURES</p>
-      Add your exhibitions, awards, press coverage and other recognitions here.
+      NONE
     </div>
     <a class="back-home" href="#home">← Back to Home</a>
   </div>
 </div>
+<!-- CONTACT PAGE -->
+<section class="page" id="contact">
 
+  <div class="content-area">
+
+    <p class="eyebrow">GET IN TOUCH</p>
+
+    <h1>Let's Connect.</h1>
+
+    <p>
+      For general enquiries, collaborations, commissions
+      and other requests, you are welcome to reach me
+      through the channels below.
+    </p>
+
+    <div class="contact-actions">
+
+      <a class="art-action"
+         href="https://wa.me/2349042493332"
+         target="_blank"
+         rel="noopener noreferrer">
+        <i class="fa-brands fa-whatsapp"></i>
+        WHATSAPP
+      </a>
+
+      <a class="art-action"
+         href="mailto:ennysonik@gmail.com">
+        <i class="fa-solid fa-envelope"></i>
+        EMAIL
+      </a>
+
+    </div>
+
+  </div>
+
+</section> 
 <div id="faq" class="page">
   <div class="page-container">
     <div class="page-heading">
@@ -906,7 +1045,8 @@ As a self-thought  artist, the journey of my art began at the age of ten, and th
     <a href="#services">Services</a>
     <a href="#commissions">Commissions</a>
     <a href="#exhibitions">Exhibitions &amp; Features</a>
-    <a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+<a href="#faq">FAQ</a> 
   </nav>
 
   <div class="drawer-foot">
@@ -989,7 +1129,8 @@ const pageIds = [
   "services",
   "commissions",
   "exhibitions",
-  "faq"
+  "contact",
+  "faq" 
 ];
 
 function showPage(){
@@ -1050,6 +1191,95 @@ thanksButton.addEventListener("click",function(){
 });
 
 </script>
+<!-- PRINT ORDER CONTACT WINDOW -->
+<div class="order-modal" id="orderModal" aria-hidden="true">
 
+  <div class="order-backdrop" id="orderBackdrop"></div>
+
+  <div class="order-dialog"
+       role="dialog"
+       aria-modal="true"
+       aria-labelledby="orderTitle">
+
+    <button type="button"
+            class="order-close"
+            id="orderClose"
+            aria-label="Close">
+      &times;
+    </button>
+
+    <p class="eyebrow">ARTWORK INQUIRY</p>
+
+    <h2 id="orderTitle">How would you like to inquire?</h2>
+
+    <p id="selectedArtwork"></p>
+
+    <div class="order-choices">
+
+      <a id="orderWhatsApp"
+         class="art-action"
+         target="_blank"
+         rel="noopener noreferrer">
+        <i class="fa-brands fa-whatsapp"></i>
+        WHATSAPP
+      </a>
+
+      <a id="orderEmail" class="art-action">
+        <i class="fa-solid fa-envelope"></i>
+        EMAIL
+      </a>
+
+    </div>
+  </div> 
+</div>
+  <script>
+  // INSERT YOUR PERSONAL EMAIL ADDRESS HERE
+  const contactEmail = "ennysonik@gmail.com";
+
+  const orderModal = document.getElementById("orderModal");
+  const orderBackdrop = document.getElementById("orderBackdrop");
+  const orderClose = document.getElementById("orderClose");
+
+  const selectedArtwork = document.getElementById("selectedArtwork");
+  const orderWhatsApp = document.getElementById("orderWhatsApp");
+  const orderEmail = document.getElementById("orderEmail");
+
+  // Open contact window when an artwork button is clicked
+  document.querySelectorAll(".order-button").forEach(button => {
+    button.addEventListener("click", () => {
+
+      const artwork = button.dataset.artwork;
+
+      const message =
+        `Hello Enny Sonik, I'm interested in ordering a print of "${artwork}". Please send me the available options and payment details.`;
+
+      selectedArtwork.textContent = artwork;
+
+      orderWhatsApp.href =
+        `https://wa.me/2349042493332?text=${encodeURIComponent(message)}`;
+
+      orderEmail.href =
+        `mailto:${contactEmail}?subject=${encodeURIComponent("Print enquiry: " + artwork)}&body=${encodeURIComponent(message)}`;
+
+      orderModal.classList.add("open");
+      orderModal.setAttribute("aria-hidden", "false");
+    });
+  });
+
+  // Close contact window
+  function closeOrderModal() {
+    orderModal.classList.remove("open");
+    orderModal.setAttribute("aria-hidden", "true");
+  }
+
+  orderClose.addEventListener("click", closeOrderModal);
+  orderBackdrop.addEventListener("click", closeOrderModal);
+
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape") {
+      closeOrderModal();
+    }
+  });
+  </script> 
 </body>
 </html>
